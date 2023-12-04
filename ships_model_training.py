@@ -203,7 +203,7 @@ model = unet_model()
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=[dice_coefficient])
 
 # Train the model and store the history
-history = model.fit(X_train, y_train, validation_data=(X_val, y_val), epochs=2, batch_size=8)
+history = model.fit(X_train, y_train, validation_data=(X_val, y_val), epochs=30, batch_size=8)
 
 # Save the trained model in certain directory
 model.save("..............")
